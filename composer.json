@@ -1,0 +1,28 @@
+{
+    "name": "urbanindo/yii2-dynamodb-session",
+    "description": "Yii2 Extension for handling session using AWS DynamoDB",
+    "license": "BSD License",
+    "authors": [
+        {
+            "name": "Petra Barus",
+            "email": "petra.barus@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "*",
+        "aws/aws-sdk-php": "~2.8.15"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.6.*",
+        "phpunit/dbunit": ">=1.2",
+        "fzaninotto/faker": "dev-master",
+        "flow/jsonpath": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "UrbanIndo\\Yii2\\DynamoDbSession\\": "src/"
+        }
+    }
+}
