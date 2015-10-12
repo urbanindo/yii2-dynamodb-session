@@ -98,6 +98,9 @@ class Session extends \yii\web\Session {
                 'TableName' => $this->tableName,
                 'Key' => $marshaler->marshalItem($keys),
             ]);
+            if (!isset($result['Item'])) {
+                return '';
+            }
             $values = $marshaler->unmarshalItem($result['Item']);
             if (!isset($values[$this->dataColumn])) {
                 return '';
