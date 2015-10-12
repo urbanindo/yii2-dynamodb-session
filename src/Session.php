@@ -16,7 +16,7 @@ use Aws\DynamoDb\Marshaler;
  * @author Petra Barus <petra.barus@gmail.com>
  * @link https://github.com/urbanindo/yii2-dynamodb
  */
-class Session extends yii\web\Session {
+class Session extends \yii\web\Session {
     
     /**
      * Configuration for DynamoDB client.
