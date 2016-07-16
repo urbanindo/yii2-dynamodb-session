@@ -107,6 +107,7 @@ class Session extends \yii\web\Session {
             }
             return $values[$this->dataColumn];
         } catch (\Exception $ex) {
+            Yii::error(__CLASS__ . '::' . __METHOD__ . ': ' . $ex->getMessage(), 'yii2dynamodbsession');
             return false;
         }
     }
@@ -132,7 +133,8 @@ class Session extends \yii\web\Session {
                 'Item' => $marshaler->marshalItem($values),
             ]);
             return true;
-        } catch (\Exception $exc) {
+        } catch (\Exception $ex) {
+            Yii::error(__CLASS__ . '::' . __METHOD__ . ': ' . $ex->getMessage(), 'yii2dynamodbsession');
             return false;
         }
     }
@@ -154,7 +156,8 @@ class Session extends \yii\web\Session {
                 'Key' => $marshaler->marshalItem($keys),
             ]);
             return true;
-        } catch (\Exception $exc) {
+        } catch (\Exception $ex) {
+            Yii::error(__CLASS__ . '::' . __METHOD__ . ': ' . $ex->getMessage(), 'yii2dynamodbsession');
             return false;
         }
     }
